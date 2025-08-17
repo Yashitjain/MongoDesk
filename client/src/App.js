@@ -21,7 +21,7 @@ function App() {
     console.log("Submitting:", { prompt, content }); // Log the values for debugging
     event.preventDefault(); // Prevent the default form submission
     try {
-      const res = await fetch(`http://localhost:8000/api/chat?t=${new Date().getTime()}`, {
+      const res = await fetch(`https://mongodesk-api.onrender.com?t=${new Date().getTime()}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ function App() {
     event.preventDefault(); // Prevent the default form submission
     const to = event.target.to.value; // Get the email address from the form
     try {
-      const res = await fetch(`http://localhost:8000/api/sendMail?t=${new Date().getTime()}`, {
+      const res = await fetch(`https://mongodesk-api.onrender.com?t=${new Date().getTime()}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
